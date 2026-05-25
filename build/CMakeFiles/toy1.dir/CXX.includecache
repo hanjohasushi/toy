@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nord/Desktop/toy/extras/epoll_wait.cpp
+sys/epoll.h
+-
+sys/eventfd.h
+-
+unistd.h
+-
+thread
+-
+iostream
+-
+

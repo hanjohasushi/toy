@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/toy.dir/extras/producer_consumer.cpp.o  -o toy  -lpthread 

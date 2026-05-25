@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/toy1.dir/extras/epoll_wait.cpp.o  -o toy1  -lpthread 
