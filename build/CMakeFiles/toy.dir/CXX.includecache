@@ -7,13 +7,15 @@
 #IncludeRegexTransform: 
 
 /home/nord/Desktop/toy/extras/producer_consumer.cpp
+sys/epoll.h
+-
+sys/eventfd.h
+-
+unistd.h
+-
 thread
 -
 deque
--
-mutex
--
-condition_variable
 -
 iostream
 -
