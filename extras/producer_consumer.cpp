@@ -45,7 +45,7 @@ void transport(int epollfd)
         std::cout << "received value " << buff << "\n";
     }
 
-    std::cout << "now we can drain submission queue later\n";
+    std::cout << "now we can drain submission queue \n";
 }
 
 void produce(int epollfd, Data *data, std::deque<Frame> &squeue)
