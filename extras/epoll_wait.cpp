@@ -39,7 +39,7 @@ int main()
 
     std::thread t(worker, epfd);
 
-    std::this_thread::sleep_for(std::chrono::seconds(5));
+    std::this_thread::sleep_for(std::chrono::seconds(10));
 
     uint64_t value = 1;
     write(efd, &value, sizeof(value));
