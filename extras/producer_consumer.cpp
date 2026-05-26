@@ -44,6 +44,8 @@ void transport(int epollfd)
         read(epollfd, &buff, sizeof(buff));
         std::cout << "received value " << buff << "\n";
     }
+
+    std::cout << "now we can drain submission queue\n";
 }
 
 void produce(int epollfd, Data *data, std::deque<Frame> &squeue)
@@ -98,7 +100,7 @@ int main()
     data->id = 1729;
     data->payload = 10;
 
-    std::thread producer(produce);
+    std::thread producer(produce, std::ref(epollfd), data, std::ref(submissionQ));
 
     transporter.join();
     producer.join();
