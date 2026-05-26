@@ -33,11 +33,6 @@ void transport(int epollfd)
 
     std::cout << " value of n when wpoll wakes " << n << "\nprinting events\n";
 
-    for (auto &i : evs)
-    {
-        std::cout << "epoll event is " << i.events << " \n";
-    }
-
     if (evs[0].events & EPOLLIN)
     {
         uint64_t buff;
