@@ -1,12 +1,14 @@
-#include "frame.h"
 #include <memory>
 #include <chrono>
+#include <sys/uio.h>
+#include <vector>
 
 class Job
 {
 public:
-    Frame frame;
+    std::vector<struct iovec> buffs;
+    int count;
     int bytesSent;
     std::chrono::system_clock::time_point createdAt;
-    Job(Frame f_) : createdAt(std::chrono::system_clock::now()), frame(std::move(f_)) {};
+    Job(int n) : createdAt(std::chrono::system_clock::now()), count(n) {};
 };

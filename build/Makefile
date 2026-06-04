@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named toy1
-
-# Build rule for target.
-toy1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 toy1
-.PHONY : toy1
-
-# fast build rule for target.
-toy1/fast:
-	$(MAKE) -f CMakeFiles/toy1.dir/build.make CMakeFiles/toy1.dir/build
-.PHONY : toy1/fast
-
-#=============================================================================
 # Target rules for targets named toy
 
 # Build rule for target.
@@ -136,32 +123,18 @@ toy/fast:
 	$(MAKE) -f CMakeFiles/toy.dir/build.make CMakeFiles/toy.dir/build
 .PHONY : toy/fast
 
-extras/epoll_wait.o: extras/epoll_wait.cpp.o
+#=============================================================================
+# Target rules for targets named toyc
 
-.PHONY : extras/epoll_wait.o
+# Build rule for target.
+toyc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 toyc
+.PHONY : toyc
 
-# target to build an object file
-extras/epoll_wait.cpp.o:
-	$(MAKE) -f CMakeFiles/toy1.dir/build.make CMakeFiles/toy1.dir/extras/epoll_wait.cpp.o
-.PHONY : extras/epoll_wait.cpp.o
-
-extras/epoll_wait.i: extras/epoll_wait.cpp.i
-
-.PHONY : extras/epoll_wait.i
-
-# target to preprocess a source file
-extras/epoll_wait.cpp.i:
-	$(MAKE) -f CMakeFiles/toy1.dir/build.make CMakeFiles/toy1.dir/extras/epoll_wait.cpp.i
-.PHONY : extras/epoll_wait.cpp.i
-
-extras/epoll_wait.s: extras/epoll_wait.cpp.s
-
-.PHONY : extras/epoll_wait.s
-
-# target to generate assembly for a file
-extras/epoll_wait.cpp.s:
-	$(MAKE) -f CMakeFiles/toy1.dir/build.make CMakeFiles/toy1.dir/extras/epoll_wait.cpp.s
-.PHONY : extras/epoll_wait.cpp.s
+# fast build rule for target.
+toyc/fast:
+	$(MAKE) -f CMakeFiles/toyc.dir/build.make CMakeFiles/toyc.dir/build
+.PHONY : toyc/fast
 
 extras/producer_consumer.o: extras/producer_consumer.cpp.o
 
@@ -190,6 +163,33 @@ extras/producer_consumer.cpp.s:
 	$(MAKE) -f CMakeFiles/toy.dir/build.make CMakeFiles/toy.dir/extras/producer_consumer.cpp.s
 .PHONY : extras/producer_consumer.cpp.s
 
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/toyc.dir/build.make CMakeFiles/toyc.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/toyc.dir/build.make CMakeFiles/toyc.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/toyc.dir/build.make CMakeFiles/toyc.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,14 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... toy1"
 	@echo "... toy"
-	@echo "... extras/epoll_wait.o"
-	@echo "... extras/epoll_wait.i"
-	@echo "... extras/epoll_wait.s"
+	@echo "... toyc"
 	@echo "... extras/producer_consumer.o"
 	@echo "... extras/producer_consumer.i"
 	@echo "... extras/producer_consumer.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

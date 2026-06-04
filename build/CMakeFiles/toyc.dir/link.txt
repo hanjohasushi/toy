@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/toyc.dir/main.cpp.o  -o toyc  -lpthread 

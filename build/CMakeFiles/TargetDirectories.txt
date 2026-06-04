@@ -1,4 +1,4 @@
 /home/nord/Desktop/toy/build/CMakeFiles/rebuild_cache.dir
 /home/nord/Desktop/toy/build/CMakeFiles/edit_cache.dir
-/home/nord/Desktop/toy/build/CMakeFiles/toy1.dir
 /home/nord/Desktop/toy/build/CMakeFiles/toy.dir
+/home/nord/Desktop/toy/build/CMakeFiles/toyc.dir
